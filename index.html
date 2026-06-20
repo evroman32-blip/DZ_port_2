@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Coder — Portfolio / Web & AI Experiences</title>
+  <meta name="description" content="Я делаю сайты, интерфейсы и digital-проекты, которые выглядят как вайб, а работают как система." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;800;900&family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="pixel-trail.css" />
+</head>
+<body>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress__bar" id="scrollProgress"></div>
+  </div>
+
+  <!-- Grain + glow atmosphere -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="glow glow--lime" aria-hidden="true"></div>
+  <div class="glow glow--coral" aria-hidden="true"></div>
+
+  <!-- Pixel trail cursor -->
+  <div id="pixelTrail" class="pixel-trail" aria-hidden="true">
+    <svg class="goo-filter-container" aria-hidden="true">
+      <defs>
+        <filter id="custom-goo-filter">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+          <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Top nav -->
+  <header class="nav" id="top">
+    <a href="#top" class="nav__mark">VC<span class="nav__dot">●</span></a>
+    <nav class="nav__links" aria-label="Основная навигация">
+      <a href="#about" data-nav="about">Обо мне</a>
+      <a href="#skills" data-nav="skills">Что умею</a>
+      <a href="#projects" data-nav="projects">Проекты</a>
+      <a href="#contact" data-nav="contact">Контакты</a>
+    </nav>
+    <a href="#contact" class="nav__cta" data-magnetic>Обсудить →</a>
+  </header>
+
+  <main>
+    <!-- ░░ HERO ░░ -->
+    <section class="hero" id="hero">
+      <div class="hero__grid">
+        <div class="hero__col">
+          <p class="kicker hero-enter">Vibe Coder <span>/</span> Portfolio <span>/</span> Web &amp; AI Experiences</p>
+          <h1
+            class="hero__title hero-enter"
+            data-delay="1"
+            id="heroTitle"
+            data-decrypted-text
+            data-decrypt-sequential
+            data-decrypt-direction="start"
+            data-decrypt-trigger="load"
+            data-decrypt-speed="42"
+            data-decrypt-delay="320"
+            data-decrypt-original-chars
+          >
+            Я делаю сайты, интерфейсы и&nbsp;digital-проекты, которые выглядят как
+            <span class="hl">вайб</span>, а работают как <span class="hl hl--coral">система</span>
+          </h1>
+          <p class="hero__sub hero-enter" data-delay="2">
+            Не просто «что-то сверстать», а собрать ощущение, стиль, логику и подачу так,
+            чтобы проект хотелось открыть, листать и&nbsp;запомнить.
+          </p>
+          <div class="hero__actions hero-enter" data-delay="3">
+            <a href="#projects" class="btn btn--primary" data-magnetic>Посмотреть проекты</a>
+            <a href="#contact" class="btn btn--ghost" data-magnetic>Обсудить задачу</a>
+          </div>
+        </div>
+        <div class="hero__photo hero-enter" data-delay="2">
+          <div class="hero__photo-tilt" id="heroPhotoTilt">
+            <div class="hero__photo-frame">
+            <img src="assets/portrait.jpg" alt="Портрет вайбкодера" loading="eager" />
+            <span class="hero__photo-badge">● Available for work</span>
+            <span class="hero__photo-tag">Vibe Coder</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__marquee hero-enter" data-delay="4" aria-hidden="true">
+        <div class="marquee__track">
+          <span>лендинги</span><span>•</span><span>портфолио</span><span>•</span><span>промо</span><span>•</span><span>интерфейсы</span><span>•</span><span>AI-first</span><span>•</span><span>digital-концепты</span><span>•</span>
+          <span>лендинги</span><span>•</span><span>портфолио</span><span>•</span><span>промо</span><span>•</span><span>интерфейсы</span><span>•</span><span>AI-first</span><span>•</span><span>digital-концепты</span><span>•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ ABOUT ░░ -->
+    <section class="about section" id="about">
+      <div class="section__head">
+        <span class="tag">01 — Обо мне</span>
+      </div>
+      <div class="about__grid">
+        <h2 class="about__title reveal">Я не просто пишу код — я&nbsp;собираю <span class="hl">впечатление</span></h2>
+        <div class="about__body reveal" data-delay="1">
+          <p>Я работаю на стыке кода, визуала, UX и AI-инструментов. Для меня сайт — это не набор блоков. Это ощущение от проекта, ритм, подача, структура и то, как человек чувствует себя внутри интерфейса.</p>
+          <ul class="about__list">
+            <li>лендинги</li>
+            <li>портфолио</li>
+            <li>промо-страницы</li>
+            <li>интерфейсы</li>
+            <li>спецпроекты</li>
+            <li>digital-концепты</li>
+            <li>AI-first сайты и продукты</li>
+          </ul>
+          <p class="about__note">Мой подход — сделать быстро, красиво и не бездумно. Чтобы проект не выглядел как очередной шаблон, собранный без вкуса и идеи.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SKILLS ░░ -->
+    <section class="skills section" id="skills">
+      <div class="section__head">
+        <span class="tag">02 — Что я умею</span>
+        <h2 class="section__title reveal">Что я делаю</h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card__num">01</span>
+          <h3>Лендинги</h3>
+          <p>Сайты, которые не просто «есть», а собирают внимание, держат ритм и ведут человека по смыслу.</p>
+        </article>
+        <article class="card reveal" data-delay="1">
+          <span class="card__num">02</span>
+          <h3>Портфолио и личные сайты</h3>
+          <p>Страницы, которые показывают не только работы, но и стиль, характер и уровень.</p>
+        </article>
+        <article class="card reveal" data-delay="2">
+          <span class="card__num">03</span>
+          <h3>Визуальные концепты</h3>
+          <p>Когда нужен не просто сайт, а ощущение: атмосфера, характер, настроение, подача.</p>
+        </article>
+        <article class="card reveal" data-delay="1">
+          <span class="card__num">04</span>
+          <h3>AI × Web</h3>
+          <p>Использую нейросети как инструмент ускорения и усиления идей, а не как замену мышлению.</p>
+        </article>
+        <article class="card reveal" data-delay="2">
+          <span class="card__num">05</span>
+          <h3>UX и структура</h3>
+          <p>Продумываю, как человек читает, куда смотрит, где теряется и где принимает решение.</p>
+        </article>
+        <article class="card reveal" data-delay="3">
+          <span class="card__num">06</span>
+          <h3>Быстрый запуск</h3>
+          <p>Могу собрать сильную первую версию быстро, без месяцев бесконечных согласований.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ░░ APPROACH ░░ -->
+    <section class="approach section" id="approach">
+      <div class="section__head">
+        <span class="tag">03 — Мой подход</span>
+        <h2 class="section__title reveal">Как я работаю</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__index">01</span>
+          <h3>Сначала вайб</h3>
+          <p>Я смотрю не только на задачу, но и на ощущение, которое должен передавать проект.</p>
+        </li>
+        <li class="step reveal" data-delay="1">
+          <span class="step__index">02</span>
+          <h3>Потом структура</h3>
+          <p>Красивый сайт без логики — это просто красивая обёртка. Поэтому я собираю смысл, сценарий и путь пользователя.</p>
+        </li>
+        <li class="step reveal" data-delay="2">
+          <span class="step__index">03</span>
+          <h3>Потом реализация</h3>
+          <p>Когда есть стиль и логика, проект собирается быстрее, точнее и выглядит сильно.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ░░ PROJECTS ░░ -->
+    <section class="projects section" id="projects">
+      <div class="section__head">
+        <span class="tag">04 — Проекты</span>
+        <h2 class="section__title reveal">Избранные проекты</h2>
+      </div>
+      <div class="projects__grid">
+        <article class="project reveal">
+          <div class="project__media" data-label="AI"></div>
+          <div class="project__body">
+            <span class="project__idx">P-01</span>
+            <h3>AI Landing Experience</h3>
+            <p>Лендинг для digital-продукта с акцентом на атмосферу, скорость восприятия и современный визуал.</p>
+            <p class="project__done"><b>Что сделано:</b> структура, тексты, дизайн-концепция, сборка.</p>
+          </div>
+        </article>
+        <article class="project reveal" data-delay="1">
+          <div class="project__media project__media--2" data-label="Folio"></div>
+          <div class="project__body">
+            <span class="project__idx">P-02</span>
+            <h3>Portfolio for Creative Expert</h3>
+            <p>Личный сайт-портфолио, который показывает не только кейсы, но и стиль человека.</p>
+            <p class="project__done"><b>Что сделано:</b> позиционирование, подача, визуальный ритм, упаковка работ.</p>
+          </div>
+        </article>
+        <article class="project reveal" data-delay="1">
+          <div class="project__media project__media--3" data-label="Funnel"></div>
+          <div class="project__body">
+            <span class="project__idx">P-03</span>
+            <h3>Bot &amp; Funnel Page</h3>
+            <p>Промо-страница под воронку и digital-продукт с акцентом на конверсию и лёгкость восприятия.</p>
+            <p class="project__done"><b>Что сделано:</b> логика блоков, тексты, CTA, визуальный каркас.</p>
+          </div>
+        </article>
+        <article class="project reveal" data-delay="2">
+          <div class="project__media project__media--4" data-label="Concept"></div>
+          <div class="project__body">
+            <span class="project__idx">P-04</span>
+            <h3>Concept Site for AI Creator</h3>
+            <p>Сайт с упором на трендовую подачу, сильный первый экран и ощущение «это хочется переслать».</p>
+            <p class="project__done"><b>Что сделано:</b> creative direction, структура, визуальная концепция.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ░░ WHY ME ░░ -->
+    <section class="why section" id="why">
+      <div class="section__head">
+        <span class="tag">05 — Почему со мной</span>
+      </div>
+      <div class="why__grid">
+        <h2 class="why__title reveal">Почему ко мне идут не&nbsp;просто за&nbsp;<span class="hl">кодом</span></h2>
+        <div class="why__body reveal" data-delay="1">
+          <p>Потому что я умею видеть проект целиком. Не только <em>как это собрать</em>, но и:</p>
+          <ul class="why__list">
+            <li>как это подать</li>
+            <li>как это будет восприниматься</li>
+            <li>где человек зацепится взглядом</li>
+            <li>что запомнит</li>
+            <li>почему это будет выглядеть дороже, чем стоит</li>
+          </ul>
+          <p class="why__formula">эстетика <span>+</span> структура <span>+</span> digital-мышление <span>+</span> скорость</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ STACK ░░ -->
+    <section class="stack section" id="stack">
+      <div class="section__head">
+        <span class="tag">06 — Стек</span>
+        <h2 class="section__title reveal">Инструменты</h2>
+      </div>
+      <div class="badges reveal">
+        <span class="badge">ChatGPT</span>
+        <span class="badge">Cursor</span>
+        <span class="badge">HTML / CSS / JS</span>
+        <span class="badge">React</span>
+        <span class="badge">Tailwind</span>
+        <span class="badge">Framer Motion</span>
+        <span class="badge">Figma</span>
+        <span class="badge">Tilda / Webflow / custom</span>
+        <span class="badge">Telegram / Bots / AI tools</span>
+        <span class="badge badge--accent">ПРОМПТЫ</span>
+      </div>
+      <p class="stack__note reveal" data-delay="1">
+        Но если честно — главный инструмент не стек, а <span class="hl">вкус</span>, насмотренность и умение собирать цельное впечатление.
+      </p>
+    </section>
+
+    <!-- ░░ FOR WHOM ░░ -->
+    <section class="forwhom section" id="forwhom">
+      <div class="section__head">
+        <span class="tag">07 — Для кого</span>
+        <h2 class="section__title reveal">Кому подойдёт моя работа</h2>
+      </div>
+      <ul class="forwhom__list">
+        <li class="reveal">экспертам</li>
+        <li class="reveal" data-delay="1">креаторам</li>
+        <li class="reveal" data-delay="2">digital-проектам</li>
+        <li class="reveal">AI-продуктам</li>
+        <li class="reveal" data-delay="1">студиям</li>
+        <li class="reveal" data-delay="2">тем, кому нужен сайт с характером</li>
+        <li class="reveal" data-delay="3">тем, кто не хочет шаблонную безликую страницу</li>
+      </ul>
+    </section>
+
+    <!-- ░░ MANIFESTO ░░ -->
+    <section class="manifesto section" id="manifesto">
+      <blockquote class="manifesto__quote" id="manifestoQuote">
+        Хороший сайт — это не когда «нормально сверстано».
+        Это когда у проекта появляется <span class="hl">энергия</span>, форма и&nbsp;ощущение, что он <span class="hl hl--coral">живой</span>.
+      </blockquote>
+    </section>
+
+    <!-- ░░ FINAL CTA ░░ -->
+    <section class="cta section" id="cta">
+      <div class="cta__inner reveal">
+        <h2 class="cta__title">Если тебе нужен сайт, который выглядит сильно и&nbsp;ощущается современно — давай соберём</h2>
+        <p class="cta__text">Могу помочь с концепцией, структурой, упаковкой и реализацией. От первого вайба до готовой страницы.</p>
+        <div class="cta__actions">
+          <a href="#contact" class="btn btn--primary" data-magnetic>Написать мне</a>
+          <a href="#projects" class="btn btn--ghost" data-magnetic>Посмотреть работы</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ░░ CONTACT / FOOTER ░░ -->
+  <footer class="footer" id="contact">
+    <div class="footer__top">
+      <span class="tag">08 — Контакты</span>
+      <h2 class="footer__title">Давай <span class="hl">соберём</span> что-то живое</h2>
+    </div>
+    <div class="footer__contacts">
+      <a class="footer__link" href="https://t.me/yourname">Telegram <span>@yourname</span></a>
+      <a class="footer__link" href="mailto:hello@yourmail.com">Email <span>hello@yourmail.com</span></a>
+    </div>
+    <div class="footer__socials">
+      <a href="#">Behance</a>
+      <a href="#">Dribbble</a>
+      <a href="#">GitHub</a>
+      <a href="#">Notion</a>
+      <a href="#">Instagram</a>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> Vibe Coder</span>
+      <span>Web &amp; AI Experiences</span>
+    </div>
+  </footer>
+
+  <script src="decrypted-text.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.min.js"></script>
+  <script src="pixel-trail.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* 1 — Hero entrance on load */
+    window.addEventListener('load', () => {
+      requestAnimationFrame(() => document.body.classList.add('is-loaded'));
+    });
+
+    /* Staggered scroll reveals (skip hero) */
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = e.target.getAttribute('data-delay') || 0;
+          e.target.style.transitionDelay = (d * 90) + 'ms';
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach((el) => io.observe(el));
+
+    /* 3 — Scroll progress bar */
+    const progressBar = document.getElementById('scrollProgress');
+    function updateScrollProgress() {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? window.scrollY / docHeight : 0;
+      progressBar.style.transform = `scaleX(${progress})`;
+    }
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+    updateScrollProgress();
+
+    /* 4 — Active nav section highlight */
+    const navLinks = document.querySelectorAll('.nav__links a[data-nav]');
+    const navSections = document.querySelectorAll('#about, #skills, #projects, #contact');
+    const navIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach((link) => {
+            link.classList.toggle('is-active', link.dataset.nav === id);
+          });
+        }
+      });
+    }, { rootMargin: '-42% 0px -52% 0px', threshold: 0 });
+    navSections.forEach((sec) => navIO.observe(sec));
+
+    /* 5 — Magnetic buttons */
+    if (!reducedMotion && window.matchMedia('(pointer: fine)').matches) {
+      document.querySelectorAll('[data-magnetic]').forEach((btn) => {
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = (e.clientX - rect.left - rect.width / 2) * 0.28;
+          const y = (e.clientY - rect.top - rect.height / 2) * 0.28;
+          btn.style.setProperty('--mag-x', x + 'px');
+          btn.style.setProperty('--mag-y', y + 'px');
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.setProperty('--mag-x', '0px');
+          btn.style.setProperty('--mag-y', '0px');
+        });
+      });
+    }
+
+    /* 6 — Hero photo parallax tilt */
+    const photoTilt = document.getElementById('heroPhotoTilt');
+    if (photoTilt && !reducedMotion && window.matchMedia('(pointer: fine)').matches) {
+      const heroPhoto = photoTilt.closest('.hero__photo');
+      heroPhoto.addEventListener('mousemove', (e) => {
+        const rect = heroPhoto.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        photoTilt.style.setProperty('--tilt-x', (x * 10).toFixed(2));
+        photoTilt.style.setProperty('--tilt-y', (-y * 10).toFixed(2));
+        photoTilt.style.setProperty('--shift-x', (x * 14).toFixed(1) + 'px');
+        photoTilt.style.setProperty('--shift-y', (y * 14).toFixed(1) + 'px');
+      });
+      heroPhoto.addEventListener('mouseleave', () => {
+        photoTilt.style.setProperty('--tilt-x', '0');
+        photoTilt.style.setProperty('--tilt-y', '0');
+        photoTilt.style.setProperty('--shift-x', '0px');
+        photoTilt.style.setProperty('--shift-y', '0px');
+      });
+    }
+
+    /* 10 — Manifesto word-by-word reveal */
+    const manifesto = document.getElementById('manifestoQuote');
+    function wrapManifestoWords(el) {
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      let i = 0;
+      nodes.forEach((node) => {
+        if (!node.textContent.trim()) return;
+        const parts = node.textContent.split(/(\s+)/);
+        const frag = document.createDocumentFragment();
+        parts.forEach((part) => {
+          if (/^\s+$/.test(part)) {
+            frag.appendChild(document.createTextNode(part));
+          } else if (part) {
+            const span = document.createElement('span');
+            span.className = 'manifesto__word';
+            span.style.setProperty('--wi', i++);
+            span.textContent = part;
+            frag.appendChild(span);
+          }
+        });
+        node.parentNode.replaceChild(frag, node);
+      });
+    }
+    wrapManifestoWords(manifesto);
+    const manifestoIO = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          manifestoIO.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.35 });
+    manifestoIO.observe(manifesto);
+
+    /* Glow parallax (existing) */
+    if (!reducedMotion) {
+      window.addEventListener('pointermove', (ev) => {
+        const x = (ev.clientX / window.innerWidth - 0.5);
+        const y = (ev.clientY / window.innerHeight - 0.5);
+        document.documentElement.style.setProperty('--px', x.toFixed(3));
+        document.documentElement.style.setProperty('--py', y.toFixed(3));
+      });
+    }
+  </script>
+</body>
+</html>

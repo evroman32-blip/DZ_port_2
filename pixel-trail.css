@@ -1,0 +1,40 @@
+/* Pixel trail cursor overlay — above content, clicks pass through */
+.pixel-trail {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* SVG filter must stay in DOM (not display:none) for url(#id) to work */
+.goo-filter-container {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.pixel-trail__canvas-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pixel-trail__canvas-wrap--gooey {
+  filter: url(#custom-goo-filter);
+}
+
+.pixel-trail__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+@media (prefers-reduced-motion: reduce), (pointer: coarse) {
+  .pixel-trail { display: none !important; }
+}
